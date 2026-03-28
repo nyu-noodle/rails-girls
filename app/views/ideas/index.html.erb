@@ -4,13 +4,17 @@
 
 <h1>Ideas</h1>
 
-<div id="ideas">
-  <% @ideas.each do |idea| %>
-    <%= render idea %>
-    <p>
-      <%= link_to "Show this idea", idea %>
-    </p>
-  <% end %>
+
+
+<div class="card">
+  <div class="card-body">
+    <% @ideas.each do |idea| %>
+      <%= render idea %>
+      <p>
+        <%= link_to "詳細を見る", idea, class: "btn btn-outline-secondary btn-sm" %>
+      </p>
+    <% end %>
+  </div>
 </div>
 
-<%= link_to "New idea", new_idea_path %>
+<%= link_to "新規登録", new_idea_path, class: "btn btn-primary mt-2" %>
